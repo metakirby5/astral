@@ -1,0 +1,24 @@
+{
+  "name": "vr-bss",
+  "description": "Virtual Reality Binary Star System Visualizer",
+  "main": "src/main.js",
+  "authors": [
+    "Ethan Chan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "virtual reality",
+    "binary star system"
+  ],
+  "homepage": "https://github.com/metakirby5/vr-bss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4"
+  }
+}

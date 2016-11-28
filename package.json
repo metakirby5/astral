@@ -1,0 +1,45 @@
+{
+  "name": "vr-bss",
+  "version": "1.0.0",
+  "description": "Virtual Reality Binary Star System Visualizer",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metakirby5/vr-bss.git"
+  },
+  "keywords": [
+    "virtual reality",
+    "binary star system"
+  ],
+  "author": "Ethan Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metakirby5/vr-bss/issues"
+  },
+  "homepage": "https://github.com/metakirby5/vr-bss#readme",
+  "devDependencies": {
+    "coffee-lint-loader": "0.0.1",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "coffeelint": "^1.15.7",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "minimatch": "^3.0.3",
+    "nib": "^1.1.2",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-hot-loader": "~3.0.0-beta.3",
+    "style-loader": "^0.13.1",
+    "stylint": "^1.5.6",
+    "stylint-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-merge": "^0.14.1"
+  }
+}
