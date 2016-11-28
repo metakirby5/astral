@@ -128,9 +128,10 @@ switch (ENV) {
       // Source maps
       devtool: 'cheap-module-eval-source-map',
 
-      // -- Hot loading --
-
       devServer: {
+        // Public serving
+        host: '0.0.0.0',
+
         // Adjust entry point
         inline: true,
 
