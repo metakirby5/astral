@@ -81,7 +81,7 @@ var config = {
     loaders: [
       { // Pug
         test: /\.pug$/,
-        loaders: ['pug-html-loader']
+        loaders: ['pug-html-loader'],
       },
       { // Coffeescript
         test: /\.coffee$/,
