@@ -2,7 +2,8 @@
 
 const path = require('path')
     , webpack = require('webpack')
-    , merge = require('webpack-merge');
+    , merge = require('webpack-merge')
+    , HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const
     // Environment
@@ -17,7 +18,7 @@ const
     , BUILD_PATH = path.join(__dirname, 'dist')
 
     // If you change these, you must change the script tags in index.html
-    , PUBLIC_PATH = '/static/'
+    , SRC_INDEX = 'index'
     , SRC_BUNDLE = 'main'
     , VENDOR_BUNDLE = 'vendor';
 
@@ -34,7 +35,6 @@ var config = {
   // Where to output
   output: {
     path: BUILD_PATH,
-    publicPath: PUBLIC_PATH,
     filename: '[name].js',
   },
 
@@ -79,6 +79,10 @@ var config = {
 
     // Files to load
     loaders: [
+      { // Pug
+        test: /\.pug$/,
+        loaders: ['pug-html-loader']
+      },
       { // Coffeescript
         test: /\.coffee$/,
         loaders: ['coffee'],
@@ -104,6 +108,10 @@ var config = {
   },
 
   plugins: [
+    // Generate HTML
+    new HtmlWebpackPlugin({
+      template: path.join(SRC_PATH, `${SRC_INDEX}.pug`),
+    }),
     // Separate vendor bundle
     new webpack.optimize.CommonsChunkPlugin({
       name: VENDOR_BUNDLE,
