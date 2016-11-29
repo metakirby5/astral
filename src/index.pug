@@ -7,11 +7,9 @@ html(lang='en')
   body
     a-scene
       a-sky(color="#FFF")
-      a-box(color='#CCC'
-        width='3' height='3' depth='3'
-        position='0 0 -10' rotation='45 45 45')
-        a-animation(attribute='rotation'
-          begin='click' to='0 360 0')
+      a-box(color='#CCC' width='3' height='3' depth='3'
+            position='0 0 -10' rotation='45 45 45')
+        a-animation(attribute='rotation' begin='click' to='0 360 0')
       a-light(type='spot' color='#333' position='-20 0 0' look-at='a-box')
       a-light(type='point' color='#AAA' position='0 5 0')
       a-camera(position='0 1.8 0')
