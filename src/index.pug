@@ -5,15 +5,16 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title VR BSS
   body
+    // Loading spinner
+    #spinner
     a-scene
-      a-assets
+      a-assets#assets
         img(id='sky' src='static/sky.jpg')
-        img(id='star' src='static/star.png')
       a-sky(src='#sky')
-      a-sphere(width='3' height='3' depth='3' position='0 0 -10'
-               color='orange')
+      a-sphere#p1(width='3' height='3' depth='3' position='0 0 -10'
+                  color='orange')
         a-animation(attribute='rotation' begin='click' to='0 360 0')
-      a-light(type='spot' color='#333' position='-20 0 0' look-at='a-box')
+      a-light(type='spot' color='#333' position='-20 0 0' look-at='#p1')
       a-light(type='point' color='#AAA' position='0 5 0')
-      a-camera(position='0 1.8 0')
-        a-cursor(color='#2E3A87')
+      a-camera
+        a-cursor(color='white')

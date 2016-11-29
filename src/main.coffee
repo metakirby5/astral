@@ -3,5 +3,10 @@ require 'skeleton/css/normalize.css'
 require 'skeleton/css/skeleton.css'
 require './style'
 
-# VR Library
-require 'aframe'
+$ = require 'jquery'
+aframe = require 'aframe'
+kframe = require 'kframe'
+
+# Hide spinner on load
+$('#assets').on 'loaded', ->
+  $('#spinner').hide()

@@ -101,7 +101,7 @@
     "error": true
   },
   "zeroUnits": {
-    "expect": "never",
+    "expect": false,
     "error": true
   },
   "zIndexNormalize": {
