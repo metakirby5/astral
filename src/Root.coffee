@@ -2,16 +2,20 @@
 
 {Component, DOM, createElement: ce} = require 'react'
 {div} = DOM
+
 Spinner = require './components/Spinner'
-
-# data = require 'json!yaml!./data.yaml'
-
-# # Constants of Earth
-# YEAR = 50000 # ms
-# DIAMETER = 5 # m
-# DISTANCE = 50 # m
+Scene = require './components/Scene'
 
 module.exports = class extends Component
+  constructor: (props) ->
+    super props
+    @state =
+      loaded: false
+
   render: ->
-    div null,
-      ce Spinner
+    div
+      className: 'fullscreen'
+      ce Spinner,
+        loaded: @state.loaded
+      ce Scene,
+        onLoaded: => @setState loaded: true

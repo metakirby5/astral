@@ -23,6 +23,7 @@
   "homepage": "https://github.com/metakirby5/vr-bss#readme",
   "dependencies": {
     "aframe": "^0.3.2",
+    "aframe-animation-component": "^3.0.4",
     "aframe-react": "^3.4.0",
     "coffee-lint-loader": "0.0.1",
     "coffee-loader": "^0.7.2",
@@ -33,7 +34,6 @@
     "html-webpack-plugin": "^2.24.1",
     "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
-    "kframe": "^0.3.0",
     "minimatch": "^3.0.3",
     "nib": "^1.1.2",
     "pug-html-loader": "^1.0.9",

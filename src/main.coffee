@@ -7,7 +7,7 @@ require './style'
 
 # Load VR libs.
 require 'aframe'
-require 'kframe'
+require 'aframe-animation-component'
 
 {AppContainer} = require 'react-hot-loader'
 {createElement: ce} = require 'react'

@@ -40,49 +40,17 @@ aframe:
     tween.js "^15.0.0"
     webvr-polyfill "0.9.15"
 
-aframe-audio-visualizer-components@^0.3.0:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/aframe-audio-visualizer-components/-/aframe-audio-visualizer-components-0.3.3.tgz#86fe6ad3ba12879e1a8cc8252ee7e2b01a67030f"
-
-aframe-entity-generator-component@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/aframe-entity-generator-component/-/aframe-entity-generator-component-0.1.0.tgz#3364311573ebf1f0c84fb0054e9ae7dd89fea0ad"
-
-aframe-event-set-component@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/aframe-event-set-component/-/aframe-event-set-component-0.1.2.tgz#7283410956db5caf25d79073523bb3087da7deed"
-
-aframe-firebase-component@^1.0.5:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/aframe-firebase-component/-/aframe-firebase-component-1.0.8.tgz#f26209061dfd6369c4ff14414809856e6652bdbd"
+aframe-animation-component@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/aframe-animation-component/-/aframe-animation-component-3.0.4.tgz#d6a1495037b2047ab185094b10558fdb4decfc2d"
   dependencies:
-    firebase "^3.0.0"
-
-aframe-layout-component@^1.2.0:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/aframe-layout-component/-/aframe-layout-component-1.2.3.tgz#66c6970ded6eb10bcbc651684b77ce1105889474"
-
-aframe-look-at-component@^0.1.1:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/aframe-look-at-component/-/aframe-look-at-component-0.1.2.tgz#6860c18fd06e1a55b19111a0a07bea982af0ad2c"
-
-aframe-randomizer-components@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/aframe-randomizer-components/-/aframe-randomizer-components-0.2.0.tgz#71e76620fbdb7a5a6e4ca0c92f135e5f15fde669"
+    animejs "^1.1.0"
 
 aframe-react@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/aframe-react/-/aframe-react-3.4.0.tgz#4370deb6649550bdb15799b7515a99dd2c6a844a"
   dependencies:
     style-attr "^1.2.0"
-
-aframe-template-component@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/aframe-template-component/-/aframe-template-component-1.6.0.tgz#ac8ffd9acec7b78cab40cfee90ca0d3cb58bec69"
-
-aframe-text-component@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/aframe-text-component/-/aframe-text-component-0.3.0.tgz#a9c483be1eb58a3588c3aead7ccddda4fa8f8049"
 
 align-text@^0.1.1, align-text@^0.1.3:
   version "0.1.4"
@@ -99,6 +67,10 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+animejs@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-1.1.1.tgz#be910a58735b467a52ccd858ea60f02f877bd92e"
 
 ansi-regex@^1.0.0, ansi-regex@^1.1.0:
   version "1.1.1"
@@ -317,14 +289,6 @@ base64-js@^1.0.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.0.tgz#a39992d723584811982be5e290bb6a53d86700f1"
 
-base64-url@^1.2.1:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/base64-url/-/base64-url-1.3.3.tgz#f8b6c537f09a4fc58c99cb86e0b0e9c61461a20f"
-
-base64url@2.0.0, base64url@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/base64url/-/base64url-2.0.0.tgz#eac16e03ea1438eff9423d69baa36262ed1f70bb"
-
 bcrypt-pbkdf@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.0.tgz#3ca76b85241c7170bf7d9703e7b9aa74630040d4"
@@ -412,10 +376,6 @@ browserslist@~1.4.0:
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-1.4.0.tgz#9cfdcf5384d9158f5b70da2aa00b30e8ff019049"
   dependencies:
     caniuse-db "^1.0.30000539"
-
-buffer-equal-constant-time@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz#f8e71132f7ffe6e01a5c9697a4c6f3e48d5cc819"
 
 buffer-shims@^1.0.0:
   version "1.0.0"
@@ -1037,10 +997,6 @@ dom-serializer@0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom-storage@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/dom-storage/-/dom-storage-2.0.2.tgz#ed17cbf68abd10e0aef8182713e297c5e4b500b0"
-
 dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
@@ -1093,12 +1049,6 @@ ecc-jsbn@~0.1.1:
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
   dependencies:
     jsbn "~0.1.0"
-
-ecdsa-sig-formatter@1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.7.tgz#3137e976a1d6232517e2513e04e32f79bcbdf126"
-  dependencies:
-    base64-url "^1.2.1"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -1221,12 +1171,6 @@ fastparse@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.1.tgz#d1e2643b38a94d7583b479060e6c4affc94071f8"
 
-faye-websocket@0.9.3:
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.9.3.tgz#482a505b0df0ae626b969866d3bd740cdb962e83"
-  dependencies:
-    websocket-driver ">=0.5.1"
-
 fbjs@^0.8.1, fbjs@^0.8.4:
   version "0.8.6"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.6.tgz#7eb67d6986b2d5007a9b6e92e0e7cb6f75cad290"
@@ -1304,16 +1248,6 @@ fined@^1.0.1:
     lodash.isstring "^4.0.1"
     lodash.pick "^4.2.1"
     parse-filepath "^1.0.1"
-
-firebase@^3.0.0:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-3.6.1.tgz#bcd7fe28f9eb75c8ecbefba9b4763b0800995229"
-  dependencies:
-    dom-storage "2.0.2"
-    faye-websocket "0.9.3"
-    jsonwebtoken "5.7.0"
-    rsvp "3.2.1"
-    xmlhttprequest "1.8.0"
 
 first-chunk-stream@^1.0.0:
   version "1.0.0"
@@ -2213,14 +2147,6 @@ jsonpointer@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.0.tgz#6661e161d2fc445f19f98430231343722e1fcbd5"
 
-jsonwebtoken@5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-5.7.0.tgz#1c90f9a86ce5b748f5f979c12b70402b4afcddb4"
-  dependencies:
-    jws "^3.0.0"
-    ms "^0.7.1"
-    xtend "^4.0.1"
-
 jsprim@^1.2.2:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/jsprim/-/jsprim-1.3.1.tgz#2a7256f70412a29ee3670aaca625994c4dcff252"
@@ -2235,37 +2161,6 @@ jstransformer@1.0.0:
   dependencies:
     is-promise "^2.0.0"
     promise "^7.0.1"
-
-jwa@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/jwa/-/jwa-1.1.4.tgz#dbb01bd38cd409899fa715107e90d90f9bcb161e"
-  dependencies:
-    base64url "2.0.0"
-    buffer-equal-constant-time "1.0.1"
-    ecdsa-sig-formatter "1.0.7"
-    safe-buffer "^5.0.1"
-
-jws@^3.0.0:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/jws/-/jws-3.1.4.tgz#f9e8b9338e8a847277d6444b1464f61880e050a2"
-  dependencies:
-    base64url "^2.0.0"
-    jwa "^1.1.4"
-    safe-buffer "^5.0.1"
-
-kframe@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/kframe/-/kframe-0.3.0.tgz#5be7753216cc35ac22b307bf8fd00bbfae6b1173"
-  dependencies:
-    aframe-audio-visualizer-components "^0.3.0"
-    aframe-entity-generator-component "^0.1.0"
-    aframe-event-set-component "^0.1.2"
-    aframe-firebase-component "^1.0.5"
-    aframe-layout-component "^1.2.0"
-    aframe-look-at-component "^0.1.1"
-    aframe-randomizer-components "^0.2.0"
-    aframe-template-component "^1.6.0"
-    aframe-text-component "^0.3.0"
 
 kind-of@^3.0.2:
   version "3.0.4"
@@ -2794,7 +2689,7 @@ ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
 
-ms@0.7.2, ms@^0.7.1:
+ms@0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
 
@@ -3942,14 +3837,6 @@ ripemd160@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-0.2.0.tgz#2bf198bde167cacfa51c0a928e84b68bbe171fce"
 
-rsvp@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-3.2.1.tgz#07cb4a5df25add9e826ebc67dcc9fd89db27d84a"
-
-safe-buffer@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
-
 sax@0.5.x:
   version "0.5.8"
   resolved "https://registry.yarnpkg.com/sax/-/sax-0.5.8.tgz#d472db228eb331c2506b0e8c15524adb939d12c1"
@@ -4676,16 +4563,6 @@ webpack@^1.13.2:
     watchpack "^0.2.1"
     webpack-core "~0.6.0"
 
-websocket-driver@>=0.5.1:
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/websocket-driver/-/websocket-driver-0.6.5.tgz#5cb2556ceb85f4373c6d8238aa691c8454e13a36"
-  dependencies:
-    websocket-extensions ">=0.1.1"
-
-websocket-extensions@>=0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.1.tgz#76899499c184b6ef754377c2dbb0cd6cb55d29e7"
-
 webvr-polyfill@0.9.15:
   version "0.9.15"
   resolved "https://registry.yarnpkg.com/webvr-polyfill/-/webvr-polyfill-0.9.15.tgz#5b271af2f700db06076197d6b779d5ab6d56b04e"
@@ -4766,11 +4643,7 @@ xml-char-classes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/xml-char-classes/-/xml-char-classes-1.0.0.tgz#64657848a20ffc5df583a42ad8a277b4512bbc4d"
 
-xmlhttprequest@1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/xmlhttprequest/-/xmlhttprequest-1.8.0.tgz#67fe075c5c24fef39f9d65f5f7b7fe75171968fc"
-
-"xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
+"xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
