@@ -3,10 +3,14 @@ require './style'
 {Component, createElement: ce} = require 'react'
 {Entity} = require 'aframe-react'
 
-# Constants of Earth
+# Earth constants
 YEAR = 20000 # ms
 RADIUS = 5 # m
 DISTANCE = 50 # m
+
+# Trail constants
+TRAIL_COLOR = '#AAA'
+TRAIL_THICKNESS = 0.0002
 
 # Misc. constants
 MIN_DIST = 50
@@ -17,19 +21,28 @@ module.exports = class extends Component
     xr = Math.random() * MAX_TILT
     yr = Math.random() * 360
     zr = Math.random() * MAX_TILT
-    radius = RADIUS * @props.radius
+    dist = MIN_DIST + DISTANCE * @props.distance
     ce Entity,
       rotation: [xr, yr, zr]
-      animation:
-        property: 'rotation'
-        to: [xr, 360 + yr, zr].join ' '
-        easing: 'linear'
-        loop: true
-        dur: YEAR * @props.period
       ce Entity,
-        primitive: 'a-sphere'
-        position: [0, 0, MIN_DIST + DISTANCE * @props.distance]
-        geometry:
-          radius: radius
-        material:
-          color: @props.color
+        animation:
+          property: 'rotation'
+          to: '0 360 0'
+          easing: 'linear'
+          loop: true
+          dur: YEAR * @props.period
+        ce Entity,
+          primitive: 'a-torus'
+          rotation: '90 0 0'
+          geometry:
+            radius: dist
+            radiusTubular: TRAIL_THICKNESS * dist
+          material:
+            color: TRAIL_COLOR
+        ce Entity,
+          primitive: 'a-sphere'
+          position: [0, 0, dist]
+          geometry:
+            radius: RADIUS * @props.radius
+          material:
+            color: @props.color
