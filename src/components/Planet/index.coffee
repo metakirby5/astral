@@ -12,6 +12,11 @@ DISTANCE = 50 # m
 TRAIL_COLOR = '#AAA'
 TRAIL_THICKNESS = 0.0002
 
+# Label constants
+LABEL_SIZE = 0.05
+LABEL_Y = 0.05
+LABEL_COLOR = 'white'
+
 # Misc. constants
 MIN_DIST = 50
 MAX_TILT = 10
@@ -22,6 +27,7 @@ module.exports = class extends Component
     yr = Math.random() * 360
     zr = Math.random() * MAX_TILT
     dist = MIN_DIST + DISTANCE * @props.distance
+    radius = RADIUS * @props.radius
     ce Entity,
       rotation: [xr, yr, zr]
       ce Entity,
@@ -41,8 +47,15 @@ module.exports = class extends Component
             color: TRAIL_COLOR
         ce Entity,
           primitive: 'a-sphere'
-          position: [0, 0, dist]
+          position: [0, 0, -dist]
           geometry:
-            radius: RADIUS * @props.radius
+            radius: radius
           material:
             color: @props.color
+          ce Entity,
+            position: [-radius, LABEL_Y * dist + radius, 0]
+            text:
+              text: @props.name
+              size: LABEL_SIZE * dist
+            material:
+              color: LABEL_COLOR
