@@ -1,7 +1,7 @@
 {
-  "name": "vr-bss",
+  "name": "astral",
   "version": "1.0.0",
-  "description": "Virtual Reality Binary Star System Visualizer",
+  "description": "Virtual Reality Solar System Visualizer",
   "main": "src/main.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/metakirby5/vr-bss.git"
+    "url": "git+https://github.com/metakirby5/astral.git"
   },
   "keywords": [
     "virtual reality",
-    "binary star system"
+    "solar system"
   ],
   "author": "Ethan Chan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/metakirby5/vr-bss/issues"
+    "url": "https://github.com/metakirby5/astral/issues"
   },
-  "homepage": "https://github.com/metakirby5/vr-bss#readme",
+  "homepage": "https://github.com/metakirby5/astral#readme",
   "dependencies": {
     "aframe": "^0.3.2",
     "aframe-animation-component": "^3.0.4",

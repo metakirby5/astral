@@ -1,2 +1,2 @@
-# vr-bss
-Virtual Reality Binary Star System Visualizer
+# astral
+Virtual Reality Solar System Visualizer
