@@ -4,4 +4,4 @@ require './style'
 {div} = DOM
 
 module.exports = class extends Component
-  render: -> div (className: 'spinner' unless @props.loaded)
+  render: -> div (className: 'spinner' if @props.visible)

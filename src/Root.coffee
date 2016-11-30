@@ -4,7 +4,7 @@
 {div} = DOM
 
 Spinner = require './components/Spinner'
-Scene = require './components/Scene'
+SolarSystem = require './components/SolarSystem'
 
 module.exports = class extends Component
   constructor: (props) ->
@@ -16,6 +16,6 @@ module.exports = class extends Component
     div
       className: 'fullscreen'
       ce Spinner,
-        loaded: @state.loaded
-      ce Scene,
+        visible: not @state.loaded
+      ce SolarSystem,
         onLoaded: => @setState loaded: true

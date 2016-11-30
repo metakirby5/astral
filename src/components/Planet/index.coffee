@@ -10,16 +10,16 @@ DISTANCE = 50 # m
 
 # Trail constants
 TRAIL_COLOR = '#AAA'
-TRAIL_THICKNESS = 0.0002
+TRAIL_THICKNESS = 0.0002 # coeff
 
 # Label constants
-LABEL_SIZE = 0.05
-LABEL_Y = 0.05
+LABEL_SIZE = 0.05 # coeff
+LABEL_Y = 0.05 # coeff
 LABEL_COLOR = 'white'
 
 # Misc. constants
-MIN_DIST = 50
-MAX_TILT = 10
+MIN_DIST = 50 # deg
+MAX_TILT = 10 # deg
 
 module.exports = class extends Component
   render: ->
