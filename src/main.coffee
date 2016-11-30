@@ -1,24 +1,22 @@
+# The entry point. You shouldn't touch this.
+
 # Load vendor and global CSS.
 require 'skeleton/css/normalize.css'
 require 'skeleton/css/skeleton.css'
 require './style'
 
-$ = require 'jquery'
-aframe = require 'aframe'
-kframe = require 'kframe'
+# Load VR libs.
+require 'aframe'
+require 'kframe'
 
-data = require 'json!yaml!./data.yaml'
+{AppContainer} = require 'react-hot-loader'
+{createElement: ce} = require 'react'
+{render} = require 'react-dom'
 
-# Constants of Earth
-YEAR = 50000 # ms
-DIAMETER = 5 # m
-DISTANCE = 50 # m
+# Render the root element.
+root = document.getElementById 'react-root'
+start = (app) -> render (ce AppContainer, null, ce app), root
+start require './Root'
 
-# Selectors
-$spinner = $ '#spinner'
-$scene = $ 'scene'
-$assets = $ '#assets'
-
-# Hide spinner on load
-$assets.on 'loaded', ->
-  $spinner.hide()
+if module.hot
+  module.hot.accept './Root', -> start require './Root'

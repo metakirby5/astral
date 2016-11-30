@@ -124,9 +124,23 @@ var config = {
 switch (ENV) {
   case 'start': // Development
     console.log('Running development server...');
+    config.entry.unshift('react-hot-loader/patch');
     module.exports = merge(config, {
       // Source maps
       devtool: 'cheap-module-eval-source-map',
+
+      // -- Hot loading --
+
+      module: {
+        loaders: [
+          {
+            test: /\.coffee$/,
+            loaders: ['react-hot-loader/webpack'],
+          },
+        ],
+      },
+
+      plugins: [new webpack.HotModuleReplacementPlugin()],
 
       devServer: {
         // Public serving
@@ -137,6 +151,9 @@ switch (ENV) {
 
         // Show progress
         progress: true,
+
+        // Hot reloading
+        hot: true,
 
         // Allow routing
         historyApiFallback: true,

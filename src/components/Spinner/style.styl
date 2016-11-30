@@ -1,14 +1,14 @@
 $spinner-size = 2rem
 $spinner-color = #ccc
 
-#spinner
+.spinner
   z-index 10
   position absolute
   top 'calc(50% - %s)' % $spinner-size
   left 'calc(50% - %s)' % $spinner-size
   width $spinner-size
   height $spinner-size
-  animation sk-rotate 2.0s infinite linear
+  animation spinner-rotate 2.0s infinite linear
 
   &::before, &::after
     content ''
@@ -19,7 +19,7 @@ $spinner-color = #ccc
     top 0
     background-color $spinner-color
     border-radius 100%
-    animation sk-bounce 2.0s infinite ease-in-out
+    animation spinner-bounce 2.0s infinite ease-in-out
 
   &::after
     content ''
@@ -27,10 +27,10 @@ $spinner-color = #ccc
     bottom 0
     animation-delay -1.0s
 
-@keyframes sk-rotate
+@keyframes spinner-rotate
   100%
     transform rotate(360deg)
-@keyframes sk-bounce
+@keyframes spinner-bounce
   0%, 100%
     transform scale(0.0)
   50%
