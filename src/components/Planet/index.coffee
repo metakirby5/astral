@@ -16,7 +16,7 @@ TRAIL_THICKNESS = 0.0002  # coeff
 # Label constants
 LABEL_SIZE = 0.05  # coeff
 LABEL_Y = 0.05  # coeff
-LABEL_COLOR = 'white'
+LABEL_LAYERS = [[0, 'white'], [-0.05, 'black']]  # [[z-offset, color]]
 
 # Misc. constants
 MIN_DIST = 50  # deg
@@ -76,10 +76,11 @@ module.exports = class extends Component
                   material:
                     transparent: true
                     src: '#asset-saturn-rings'
-          ce Entity,  # Label
-            position: [-radius, LABEL_Y * dist + radius, 0]
-            text:
-              text: @props.name
-              size: LABEL_SIZE * dist
-            material:
-              color: LABEL_COLOR
+          LABEL_LAYERS.map ([offset, color]) =>
+            ce Entity,  # Label
+              position: [-radius, LABEL_Y * dist + radius, offset * dist]
+              text:
+                text: @props.name
+                size: LABEL_SIZE * dist
+              material:
+                color: color
