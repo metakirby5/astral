@@ -95,7 +95,7 @@
     "expect": "never",
     "error": true
   },
-  "universal": "never",
+  "universal": false,
   "valid": {
     "expect": true,
     "error": true
