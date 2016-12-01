@@ -52,6 +52,9 @@
     distance: 9.54
     period: 29.46
     inclination: 2.49
+  rings:
+    radius: 1.7
+    width: 0.5
 - name: uranus
   color: '#80F1F9'
   radius: 4.007

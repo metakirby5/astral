@@ -4,23 +4,23 @@ require './style'
 {Entity} = require 'aframe-react'
 
 # Earth constants
-YEAR = 20000 # ms
-DAY = YEAR / 2 # ms
-RADIUS = 5 # m
-DISTANCE = 50 # m
+YEAR = 20000  # ms
+DAY = YEAR / 2  # ms
+RADIUS = 5  # m
+DISTANCE = 50  # m
 
 # Trail constants
 TRAIL_COLOR = '#AAA'
-TRAIL_THICKNESS = 0.0002 # coeff
+TRAIL_THICKNESS = 0.0002  # coeff
 
 # Label constants
-LABEL_SIZE = 0.05 # coeff
-LABEL_Y = 0.05 # coeff
+LABEL_SIZE = 0.05  # coeff
+LABEL_Y = 0.05  # coeff
 LABEL_COLOR = 'white'
 
 # Misc. constants
-MIN_DIST = 50 # deg
-MAX_TILT = 10 # deg
+MIN_DIST = 50  # deg
+RING_THICKNESS = 0.0001  # m
 
 module.exports = class extends Component
   constructor: (props) ->
@@ -65,6 +65,18 @@ module.exports = class extends Component
                 easing: 'linear'
                 loop: true
                 dur: DAY * @props.period
+              if @props.rings
+                ce Entity,  # Rings
+                  primitive: 'a-torus'
+                  rotation: [90, 0, 0]
+                  scale: [1, 1, RING_THICKNESS]
+                  geometry:
+                    radius: radius * @props.rings.radius
+                    radiusTubular: radius * @props.rings.width / 2
+                  material:
+                    transparent: true
+                    opacity: 0.8  # TODO
+                    color: '#555'  # TODO
           ce Entity,  # Label
             position: [-radius, LABEL_Y * dist + radius, 0]
             text:
