@@ -28,16 +28,16 @@ module.exports = class extends Component
     zr = Math.random() * MAX_TILT
     dist = MIN_DIST + DISTANCE * @props.distance
     radius = RADIUS * @props.radius
-    ce Entity,
+    ce Entity,  # Angle
       rotation: [xr, yr, zr]
-      ce Entity,
+      ce Entity,  # 360 rotation
         animation:
           property: 'rotation'
           to: '0 360 0'
           easing: 'linear'
           loop: true
           dur: YEAR * @props.period
-        ce Entity,
+        ce Entity,  # Trail
           primitive: 'a-torus'
           rotation: '90 0 0'
           geometry:
@@ -45,14 +45,15 @@ module.exports = class extends Component
             radiusTubular: TRAIL_THICKNESS * dist
           material:
             color: TRAIL_COLOR
-        ce Entity,
+        ce Entity,  # Planet
           primitive: 'a-sphere'
           position: [0, 0, -dist]
           geometry:
             radius: radius
           material:
             color: @props.color
-          ce Entity,
+            src: "#asset-#{@props.name}"
+          ce Entity,  # Label
             position: [-radius, LABEL_Y * dist + radius, 0]
             text:
               text: @props.name

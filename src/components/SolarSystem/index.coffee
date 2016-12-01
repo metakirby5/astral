@@ -13,9 +13,14 @@ module.exports = class extends Component
       ce Entity,
         primitive: 'a-assets'
         onLoaded: @props.onLoaded
-        img
-          id: 'sky'
+        img  # Sky texture
+          id: 'asset-sky'
           src: 'static/sky.jpg'
+        planets.map (p, i) ->
+          img  # Planet textures
+            key: i
+            id: "asset-#{p.name}"
+            src: "static/planets/#{p.name}.jpg"
       ce Entity,
         poition: [0, 0, 0]
         ce Entity,
@@ -23,6 +28,7 @@ module.exports = class extends Component
       ce Entity,
         primitive: 'a-sky'
         material:
-          src: '#sky'
+          src: '#asset-sky'
       planets.map (p, i) ->
-        ce Planet, Object.assign p, key: i
+        ce Planet, Object.assign p,
+          key: i
