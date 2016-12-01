@@ -7,11 +7,14 @@ require './style'
 planets = require 'json!yaml!../../data/planets.yaml'
 Planet = require '../Planet'
 
+TIMEOUT = 10000
+
 module.exports = class extends Component
   render: ->
     ce Scene, null,
       ce Entity,
         primitive: 'a-assets'
+        timeout: TIMEOUT
         onLoaded: @props.onLoaded
         img  # Sky texture
           id: 'asset-sky'
