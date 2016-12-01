@@ -1,13 +1,21 @@
-$spinner-size = 10rem
-$spinner-color = #ccc
+$splash-color = #ccc
+$splash-size = 3rem
+$splash-padding = 1rem
+
+.splash
+  z-index 10
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  font-size $splash-size
+  color $splash-color
+  > *
+    margin $splash-padding
 
 .spinner
-  z-index 10
-  position absolute
-  top 'calc(50% - %s / 2)' % $spinner-size
-  left 'calc(50% - %s / 2)' % $spinner-size
-  width $spinner-size
-  height $spinner-size
+  width $splash-size
+  height $splash-size
   animation spinner-rotate 2.0s infinite linear
 
   &::before, &::after
@@ -17,7 +25,7 @@ $spinner-color = #ccc
     display inline-block
     position absolute
     top 0
-    background-color $spinner-color
+    background-color $splash-color
     border-radius 100%
     animation spinner-bounce 2.0s infinite ease-in-out
 
