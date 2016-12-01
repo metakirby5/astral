@@ -5,6 +5,7 @@ require './style'
 
 # Earth constants
 YEAR = 20000 # ms
+DAY = YEAR / 2 # ms
 RADIUS = 5 # m
 DISTANCE = 50 # m
 
@@ -28,9 +29,9 @@ module.exports = class extends Component
     zr = Math.random() * MAX_TILT
     dist = MIN_DIST + DISTANCE * @props.orbit.distance
     radius = RADIUS * @props.radius
-    ce Entity,  # Angle
+    ce Entity,  # Orbit axis
       rotation: [xr, yr, zr]
-      ce Entity,  # 360 rotation
+      ce Entity,  # Orbit rotation
         animation:
           property: 'rotation'
           to: '0 360 0'
@@ -39,20 +40,29 @@ module.exports = class extends Component
           dur: YEAR * @props.orbit.period
         ce Entity,  # Trail
           primitive: 'a-torus'
-          rotation: '90 0 0'
+          rotation: [90, 0, 0]
           geometry:
             radius: dist
             radiusTubular: TRAIL_THICKNESS * dist
           material:
             color: TRAIL_COLOR
-        ce Entity,  # Planet
-          primitive: 'a-sphere'
+        ce Entity,  # Planet position
           position: [0, 0, -dist]
-          geometry:
-            radius: radius
-          material:
-            color: @props.color
-            src: "#asset-#{@props.name}"
+          ce Entity,  # Rotation axis
+            rotation: [@props.obliquity, 0, 0]
+            ce Entity,  # Planet
+              primitive: 'a-sphere'
+              geometry:
+                radius: radius
+              material:
+                color: @props.color
+                src: "#asset-#{@props.name}"
+              animation:
+                property: 'rotation'
+                to: '0 360 0'
+                easing: 'linear'
+                loop: true
+                dur: DAY * @props.period
           ce Entity,  # Label
             position: [-radius, LABEL_Y * dist + radius, 0]
             text:
