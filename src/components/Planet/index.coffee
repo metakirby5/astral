@@ -26,7 +26,7 @@ module.exports = class extends Component
     xr = Math.random() * MAX_TILT
     yr = Math.random() * 360
     zr = Math.random() * MAX_TILT
-    dist = MIN_DIST + DISTANCE * @props.distance
+    dist = MIN_DIST + DISTANCE * @props.orbit.distance
     radius = RADIUS * @props.radius
     ce Entity,  # Angle
       rotation: [xr, yr, zr]
@@ -36,7 +36,7 @@ module.exports = class extends Component
           to: '0 360 0'
           easing: 'linear'
           loop: true
-          dur: YEAR * @props.period
+          dur: YEAR * @props.orbit.period
         ce Entity,  # Trail
           primitive: 'a-torus'
           rotation: '90 0 0'
