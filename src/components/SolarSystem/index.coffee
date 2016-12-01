@@ -21,6 +21,9 @@ module.exports = class extends Component
             key: i
             id: "asset-#{p.name}"
             src: "static/planets/#{p.name}.jpg"
+        img  # Saturn's rings
+          id: 'asset-saturn-rings'
+          src: 'static/planets/saturn-rings.png'
       ce Entity,
         poition: [0, 0, 0]
         ce Entity,
