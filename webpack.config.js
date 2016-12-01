@@ -17,8 +17,8 @@ const
     , SRC_PATH = path.join(__dirname, 'src')
     , BUILD_PATH = path.join(__dirname, 'dist')
 
-    // If you change these, you must change the script tags in index.html
-    , SRC_INDEX = 'index'
+    // Output names
+    , INDEX = 'index'
     , SRC_BUNDLE = 'main'
     , VENDOR_BUNDLE = 'vendor';
 
@@ -110,7 +110,7 @@ var config = {
   plugins: [
     // Generate HTML
     new HtmlWebpackPlugin({
-      template: path.join(SRC_PATH, `${SRC_INDEX}.pug`),
+      template: path.join(SRC_PATH, `${INDEX}.pug`),
     }),
     // Separate vendor bundle
     new webpack.optimize.CommonsChunkPlugin({
