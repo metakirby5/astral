@@ -10,6 +10,8 @@ require 'aframe'
 require 'aframe-animation-component'
 require 'aframe-text-component'
 
+AFRAME.components.timeout = null  # Monkey patch so timeout gets recognized.
+
 {AppContainer} = require 'react-hot-loader'
 {createElement: ce} = require 'react'
 {render} = require 'react-dom'
