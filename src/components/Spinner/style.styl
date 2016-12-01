@@ -1,11 +1,11 @@
-$spinner-size = 2rem
+$spinner-size = 10rem
 $spinner-color = #ccc
 
 .spinner
   z-index 10
   position absolute
-  top 'calc(50% - %s)' % $spinner-size
-  left 'calc(50% - %s)' % $spinner-size
+  top 'calc(50% - %s / 2)' % $spinner-size
+  left 'calc(50% - %s / 2)' % $spinner-size
   width $spinner-size
   height $spinner-size
   animation spinner-rotate 2.0s infinite linear
