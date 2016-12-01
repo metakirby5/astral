@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "deploy": "yarn run build && scp dist/* kirbies:s/astral"
+    "deploy": "scp dist/* kirbies:s/astral"
   },
   "repository": {
     "type": "git",
