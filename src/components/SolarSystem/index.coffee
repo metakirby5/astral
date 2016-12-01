@@ -7,7 +7,7 @@ require './style'
 planets = require 'json!yaml!../../data/planets.yaml'
 Planet = require '../Planet'
 
-TIMEOUT = 10000
+TIMEOUT = 30000
 
 module.exports = class extends Component
   render: ->
