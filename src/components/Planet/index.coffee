@@ -23,14 +23,16 @@ MIN_DIST = 50 # deg
 MAX_TILT = 10 # deg
 
 module.exports = class extends Component
+  constructor: (props) ->
+    super props
+    @state =
+      startpos: Math.random() * 360
+
   render: ->
-    xr = Math.random() * MAX_TILT
-    yr = Math.random() * 360
-    zr = Math.random() * MAX_TILT
     dist = MIN_DIST + DISTANCE * @props.orbit.distance
     radius = RADIUS * @props.radius
     ce Entity,  # Orbit axis
-      rotation: [xr, yr, zr]
+      rotation: [@props.orbit.inclination, @state.startpos, 0]
       ce Entity,  # Orbit rotation
         animation:
           property: 'rotation'
