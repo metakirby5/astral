@@ -36,5 +36,5 @@ module.exports = class extends Component
         material:
           src: '#asset-sky'
       planets.map (p, i) ->
-        ce Planet, Object.assign p,
+        ce Planet, Object.assign {}, p,
           key: i
