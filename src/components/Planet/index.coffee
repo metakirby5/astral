@@ -57,7 +57,7 @@ module.exports = class extends Component
               geometry:
                 radius: radius
               material:
-                color: @props.color
+                color: '#fff'
                 src: "#asset-#{@props.name}"
               animation:
                 property: 'rotation'

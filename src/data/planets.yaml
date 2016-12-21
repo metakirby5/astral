@@ -1,5 +1,4 @@
 - name: mercury
-  color: '#D4C2B1'
   radius: 0.382
   obliquity: 0
   period: 58.65
@@ -8,7 +7,6 @@
     period: 0.24
     inclination: 7
 - name: venus
-  color: '#FFAF00'
   radius: 0.949
   obliquity: 177.3
   period: -243.01
@@ -17,7 +15,6 @@
     period: 0.62
     inclination: 3.39
 - name: earth
-  color: '#4D9420'
   radius: 1
   obliquity: 23.4
   period: 0.997
@@ -26,7 +23,6 @@
     period: 1
     inclination: 0
 - name: mars
-  color: '#F20800'
   radius: 0.532
   obliquity: 25.2
   period: 1.026
@@ -35,7 +31,6 @@
     period: 1.88
     inclination: 1.85
 - name: jupiter
-  color: '#FABD6A'
   radius: 11.209
   obliquity: 3.1
   period: 0.410
@@ -44,7 +39,6 @@
     period: 11.86
     inclination: 1.31
 - name: saturn
-  color: '#ECC29F'
   radius: 9.44
   obliquity: 26.7
   period: 0.426
@@ -56,7 +50,6 @@
     radius: 1.7
     width: 0.5
 - name: uranus
-  color: '#80F1F9'
   radius: 4.007
   obliquity: 97.9
   period: -0.746
@@ -65,7 +58,6 @@
     period: 84.01
     inclination: 0.77
 - name: neptune
-  color: '#437CD7'
   obliquity: 29.6
   radius: 3.883
   period: 0.718

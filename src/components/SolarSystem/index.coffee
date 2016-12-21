@@ -19,9 +19,9 @@ module.exports = class extends Component
         img  # Sky texture
           id: 'asset-sky'
           src: 'static/sky.jpg'
-        planets.map (p, i) ->
+        planets.map (p) ->
           img  # Planet textures
-            key: i
+            key: p.name
             id: "asset-#{p.name}"
             src: "static/planets/#{p.name}.jpg"
         img  # Saturn's rings
@@ -35,6 +35,6 @@ module.exports = class extends Component
         primitive: 'a-sky'
         material:
           src: '#asset-sky'
-      planets.map (p, i) ->
+      planets.map (p) ->
         ce Planet, Object.assign {}, p,
-          key: i
+          key: p.name
