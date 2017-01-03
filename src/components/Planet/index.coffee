@@ -76,8 +76,9 @@ module.exports = class extends Component
                   material:
                     transparent: true
                     src: '#asset-saturn-rings'
-          LABEL_LAYERS.map ([offset, color]) =>
+          LABEL_LAYERS.map ([offset, color], i) =>
             ce Entity,  # Label
+              key: i
               position: [-radius, LABEL_Y * dist + radius, offset * dist]
               text:
                 text: @props.name
