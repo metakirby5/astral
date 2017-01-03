@@ -24,9 +24,10 @@ module.exports = class extends Component
             key: p.name
             id: "asset-#{p.name}"
             src: "static/planets/#{p.name}.jpg"
-        img  # Saturn's rings
-          id: 'asset-saturn-rings'
-          src: 'static/planets/saturn-rings.png'
+        planets.filter((p) -> p.rings?).map (p) ->
+          img  # Ring textures
+            id: "asset-#{p.name}-rings"
+            src: "static/planets/#{p.name}-rings.png"
       ce Entity,
         poition: [0, 0, 0]
         ce Entity,

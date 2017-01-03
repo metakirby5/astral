@@ -75,7 +75,7 @@ module.exports = class extends Component
                     radiusTubular: radius * @props.rings.width / 2
                   material:
                     transparent: true
-                    src: '#asset-saturn-rings'
+                    src: "#asset-#{@props.name}-rings"
           LABEL_LAYERS.map ([offset, color], i) =>
             ce Entity,  # Label
               key: i
